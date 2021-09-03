@@ -2,7 +2,6 @@ package com.rujirakongsomran.ecommerceapp.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -13,12 +12,12 @@ import com.rujirakongsomran.ecommerceapp.model.ProductCategory;
 
 import java.util.List;
 
-public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductViewHolder> {
+public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategoryAdapter.ProductViewHolder> {
 
     Context context;
     List<ProductCategory> productCategoryList;
 
-    public ProductAdapter(Context context, List<ProductCategory> productCategoryList) {
+    public ProductCategoryAdapter(Context context, List<ProductCategory> productCategoryList) {
         this.context = context;
         this.productCategoryList = productCategoryList;
     }

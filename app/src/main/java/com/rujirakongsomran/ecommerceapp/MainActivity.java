@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 
-import com.rujirakongsomran.ecommerceapp.adapter.ProductAdapter;
+import com.rujirakongsomran.ecommerceapp.adapter.ProductCategoryAdapter;
 import com.rujirakongsomran.ecommerceapp.databinding.ActivityMainBinding;
 import com.rujirakongsomran.ecommerceapp.model.ProductCategory;
 
@@ -17,7 +17,7 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-    ProductAdapter productAdapter;
+    ProductCategoryAdapter productCategoryAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView.LayoutManager layoutManager =
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
         binding.rcCategory.setLayoutManager(layoutManager);
-        productAdapter = new ProductAdapter(this, productCategoryList);
-        binding.rcCategory.setAdapter(productAdapter);
+        productCategoryAdapter = new ProductCategoryAdapter(this, productCategoryList);
+        binding.rcCategory.setAdapter(productCategoryAdapter);
     }
 }

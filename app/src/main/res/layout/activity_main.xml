@@ -144,4 +144,13 @@
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="@+id/imageView3" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcProduct"
+        android:layout_width="0dp"
+        android:layout_height="702dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/rcCategory" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
