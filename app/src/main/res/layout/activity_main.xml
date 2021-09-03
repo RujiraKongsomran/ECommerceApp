@@ -96,7 +96,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:fontFamily="@font/rubik_bold"
-        android:text="Hello, Rujira"
+        android:text="Hello, Emma"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -147,10 +147,32 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcProduct"
         android:layout_width="0dp"
-        android:layout_height="702dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/rcCategory" />
+        app:layout_constraintTop_toBottomOf="@+id/rcCategory"
+        tools:listitem="@layout/products_row_item" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="55sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/cart_button_bg"
+        android:drawableRight="@drawable/ic_cart"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/rubik_medium"
+        android:padding="8dp"
+        android:paddingEnd="24dp"
+        android:text="Your Cart is empty"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rcProduct"
+        app:layout_constraintTop_toBottomOf="@+id/rcProduct" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
