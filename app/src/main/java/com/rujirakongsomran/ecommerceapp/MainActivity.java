@@ -11,6 +11,7 @@ import com.rujirakongsomran.ecommerceapp.adapter.ProductAdapter;
 import com.rujirakongsomran.ecommerceapp.databinding.ActivityMainBinding;
 import com.rujirakongsomran.ecommerceapp.model.ProductCategory;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
         setContentView(view);
+
+        List<ProductCategory> productCategoryList = new ArrayList<>();
+        productCategoryList.add(new ProductCategory(1, "Most Popular"));
+        productCategoryList.add(new ProductCategory(2, "All Body Products"));
+        productCategoryList.add(new ProductCategory(3, "Skin Care"));
+        productCategoryList.add(new ProductCategory(4, "Hair"));
+
+        setProductRecyclerView(productCategoryList);
+
+
     }
 
     private void setProductRecyclerView(List<ProductCategory> productCategoryList) {
