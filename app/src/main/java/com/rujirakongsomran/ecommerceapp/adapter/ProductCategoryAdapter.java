@@ -7,12 +7,12 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.rujirakongsomran.ecommerceapp.databinding.ProductRowItemBinding;
+import com.rujirakongsomran.ecommerceapp.databinding.CategoryRowItemBinding;
 import com.rujirakongsomran.ecommerceapp.model.ProductCategory;
 
 import java.util.List;
 
-public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategoryAdapter.ProductViewHolder> {
+public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategoryAdapter.ProductCategoryViewHolder> {
 
     Context context;
     List<ProductCategory> productCategoryList;
@@ -24,13 +24,13 @@ public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategory
 
     @NonNull
     @Override
-    public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ProductViewHolder(ProductRowItemBinding.inflate(LayoutInflater.from(parent.getContext()),
+    public ProductCategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        return new ProductCategoryViewHolder(CategoryRowItemBinding.inflate(LayoutInflater.from(parent.getContext()),
                 parent, false));
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ProductCategoryViewHolder holder, int position) {
         holder.binding.tvCategoryName.setText(productCategoryList.get(position).getProductName());
     }
 
@@ -39,11 +39,11 @@ public class ProductCategoryAdapter extends RecyclerView.Adapter<ProductCategory
         return productCategoryList.size();
     }
 
-    public static final class ProductViewHolder extends RecyclerView.ViewHolder {
 
-        ProductRowItemBinding binding;
+    public static final class ProductCategoryViewHolder extends RecyclerView.ViewHolder {
+        CategoryRowItemBinding binding;
 
-        public ProductViewHolder(@NonNull ProductRowItemBinding binding) {
+        public ProductCategoryViewHolder(@NonNull CategoryRowItemBinding binding) {
             super(binding.getRoot());
             this.binding = binding;
         }
