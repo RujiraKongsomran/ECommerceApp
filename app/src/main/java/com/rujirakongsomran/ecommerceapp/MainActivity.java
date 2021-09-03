@@ -38,6 +38,17 @@ public class MainActivity extends AppCompatActivity {
 
         setProductRecyclerView(productCategoryList);
 
+        List<Products> productsList = new ArrayList<>();
+        productsList.add(new Products(1, "Japanese Cherry Blossom", "250 ml", "$ 17.00", R.drawable.prod2));
+        productsList.add(new Products(2, "African Mango Shower Gel", "350 ml", "$ 25.00", R.drawable.prod1));
+        productsList.add(new Products(1, "Japanese Cherry Blossom", "250 ml", "$ 17.00", R.drawable.prod2));
+        productsList.add(new Products(2, "African Mango Shower Gel", "350 ml", "$ 25.00", R.drawable.prod1));
+        productsList.add(new Products(1, "Japanese Cherry Blossom", "250 ml", "$ 17.00", R.drawable.prod2));
+        productsList.add(new Products(2, "African Mango Shower Gel", "350 ml", "$ 25.00", R.drawable.prod1));
+
+        setProductItemRecyclerView(productsList);
+
+
 
     }
 
@@ -48,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         productCategoryAdapter = new ProductCategoryAdapter(this, productCategoryList);
         binding.rcCategory.setAdapter(productCategoryAdapter);
     }
+
     private void setProductItemRecyclerView(List<Products> productsList) {
         RecyclerView.LayoutManager layoutManager =
                 new LinearLayoutManager(this, RecyclerView.HORIZONTAL, false);
